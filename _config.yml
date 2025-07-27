@@ -1,11 +1,11 @@
 # Site setings
-name: "Horace"
-description: "Horace is a simple Jekyll theme for writers and bloggers. Explore it yourself."
-meta_description: "Jekyll template, minimal style, perfect for bloggers."
+name: "Jun Hou"
+description: "Personal website of Jun Hou, a PhD student and researcher focusing on trustworthy AI, multimodal learning, and causality."
+meta_description: "Jun Hou, PhD student and researcher in trustworthy and explainable AI, causal inference, and multimodal learning."
 logo: "assets/images/logo.png"
 favicon: "assets/images/favicon.ico"
 baseurl:
-production_url: https://horace.netlify.com/
+production_url: https://JuneHou.github.io
 disqus: "justgoodthemes"
 mailchimp_url: "//justgoodthemes.us3.list-manage.com/subscribe/post?u=78f1bab16028354caeb23aecd&amp;id=4a7330d117"
 cover_image: bc_1.jpg
@@ -26,16 +26,16 @@ contact_page_description: "Please feel free to contact me if we share the same r
 thankyou_page_description: "Your message has been successfully sent. Jun will contact you very soon!"
 
 # Social links
-twitter: "username"
-facebook: "username"
-github: "username"
-codepen: "username"
-dribbble: "username"
-medium: "@username"
-instagram: "username"
-pinterest: "username"
-linkedin: "username"
-producthunt: "@username"
+#twitter: "username"
+#facebook: "username"
+github: "https://github.com/JuneHou"
+#codepen: "username"
+#dribbble: "username"
+#medium: "@username"
+#instagram: "username"
+#pinterest: "username"
+linkedin: "https://www.linkedin.com/in/jun-hou-1392b8149/"
+producthunt: "https://scholar.google.com/citations?user=4XvcYKEAAAAJ&hl=en"
 
 # Navigation
 navigation:
