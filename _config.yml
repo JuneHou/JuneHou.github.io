@@ -1,0 +1,68 @@
+# Site setings
+name: "Horace"
+description: "Horace is a simple Jekyll theme for writers and bloggers. Explore it yourself."
+meta_description: "Jekyll template, minimal style, perfect for bloggers."
+logo: "assets/images/logo.png"
+favicon: "assets/images/favicon.ico"
+baseurl:
+production_url: https://horace.netlify.com/
+disqus: "justgoodthemes"
+mailchimp_url: "//justgoodthemes.us3.list-manage.com/subscribe/post?u=78f1bab16028354caeb23aecd&amp;id=4a7330d117"
+cover_image: bc_1.jpg
+# Add your GA Tracking Id
+ga_analytics:
+
+# Author
+author:
+  name: "Jun Hou"
+  image: "authorimage.jpg"
+  greetings: "Hi there!"
+  description: "I am Jun Hou, a researcher specializing in multimodal learning, trustworthy AI, and explainable AI, currently focusing on debiasing with causal inference. 
+  My research aims to enhance AI generalizability and interpretability, particularly in healthcare applications."
+
+# Contact form setings
+email: junh@vt.edu
+contact_page_description: "Please feel free to contact me if we share the same research interests or personal interests. I will get back to you as soon as possible."
+thankyou_page_description: "Your message has been successfully sent. Jun will contact you very soon!"
+
+# Social links
+twitter: "username"
+facebook: "username"
+github: "username"
+codepen: "username"
+dribbble: "username"
+medium: "@username"
+instagram: "username"
+pinterest: "username"
+linkedin: "username"
+producthunt: "@username"
+
+# Navigation
+navigation:
+  - text: About
+    url: /about
+  - text: Archive
+    url: /tags
+  - text: Style Guide
+    url: /style-guide
+
+# Required Plugins
+plugins_dir:
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Pagination
+paginate: 5
+paginate_path: /page:num/
+
+# Permalinks
+permalink: /:title
+
+# Other
+markdown: kramdown
+
+# Sass
+sass:
+  sass_dir: _sass
+  style: compressed
