@@ -1,6 +1,7 @@
 # Site setings
 name: "Jun Hou"
-description: "Welcome to my personal website! Wish you enjoy your stay here!"
+description: "Personal website of Jun Hou, a PhD student and researcher focusing on trustworthy AI, multimodal learning, and causality."
+meta_description: "Jun Hou, PhD student and researcher in trustworthy and explainable AI, causal inference, and multimodal learning."
 logo: "assets/images/logo.png"
 favicon: "assets/images/favicon.ico"
 baseurl:
@@ -16,8 +17,7 @@ author:
   name: "Jun Hou"
   image: "authorimage.jpg"
   greetings: "Hi there!"
-  description: "I am Jun Hou, a researcher specializing in multimodal learning, trustworthy AI, and explainable AI, currently focusing on debiasing with causal inference. 
-  My research aims to enhance AI generalizability and interpretability, particularly in healthcare applications."
+  description: "Welcome to my personal website! Wish you enjoy my research and personal interests. Feel free to contact me if we share the same interests or if you have any questions."
 
 # Contact form setings
 email: junh@vt.edu
