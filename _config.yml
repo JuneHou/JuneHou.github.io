@@ -8,7 +8,7 @@ baseurl:
 production_url: https://JuneHou.github.io
 disqus: ""
 mailchimp_url: ""
-cover_image: bc_1.jpg
+cover_image: "bc_1.jpg"
 # Add your GA Tracking Id
 ga_analytics:
 
