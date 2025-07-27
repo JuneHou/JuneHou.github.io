@@ -1,19 +1,31 @@
 ---
 layout: default
-title: Home
+title: Jun Hou
 ---
 
-{% if page.url == "/" %}
-<!-- Featured-->
-<div class="featured-posts outer">
-    {% for post in site.posts %}
-        {% if post.featured == true %}
-            {% include featuredbox.html %}
-        {% endif %}
-    {% endfor %}
+<div class="container">
+  <div class="author-box">
+    <div class="author-description">
+        <p>
+        I am <strong>Jun Hou</strong>, a PhD student at the <strong>Department of Data Analytics Engineering, Northeastern University</strong>, advised by <strong>Prof. Lucy Lu Wang</strong>. My research focuses on developing <strong>robust, trustworthy, and explainable multimodal AI models</strong>, particularly aimed at improving accessibility and interpretability in healthcare. My research journey spans <strong>Multimodal Learning, Causal Inference, Explainable AI, and Clinical NLP</strong>. Through both academic and industry collaborations, I have worked on innovative projects solving real-world problems, including clinical decision support, sentiment analysis, and debiased visual question answering.
+        </p>
+
+        <p>
+        <strong>Past:</strong> Previously, I conducted research on <strong>Explainable AI (XAI)</strong> in clinical settings under <strong>Prof. Lucy Lu Wang</strong>, developing techniques to validate and enhance clinicians' trust in NLP-driven clinical models. My published works include a <strong>bi-level modality weighting framework (BTW)</strong> presented at <strong>EMNLP 2025</strong>, aimed at stabilizing multimodal integration. I hold Master's degrees in <strong>Data Analytics Engineering</strong> from <strong>Northeastern University</strong> and <strong>Actuarial Science</strong> from <strong>Columbia University</strong>, as well as a Bachelor's in <strong>Mathematics</strong> from <strong>Rutgers University</strong>.
+        </p>
+
+        <p>
+        <strong>Future:</strong> I aim to continue advancing AI research in multimodal fusion, interpretability, and causal debiasing methods. My goal is to design generalizable AI systems that are transparent, fair, and reliable, particularly for high-impact areas such as healthcare. Moving forward, I am eager to collaborate across academia and industry to create transformative technologies that improve human-AI interaction and foster trustworthiness in AI systems.
+        </p>
+
+        <p>
+        I am always open to collaboration and discussions. Please feel free to reach out to explore ideas together or simply chat about research and life!
+        </p>
+        
+    </div>
+  </div>
 </div>
-{% endif %}
-<!-- Posts Index -->
+
 <div class="outer">
     {% if page.url == "/" %}
     <div class="post-feed-title inner">Latest Articles</div>
@@ -24,11 +36,9 @@ title: Home
         {% endfor %}
     </div>
 </div>
-<!-- Pagination-->
+
 {% include pagination.html %}
-{% if site.mailchimp_url %}
+
+{% if site.mailchmimp_url %}
     {% include newsletter-box.html %}
 {% endif %}
-
-
-
