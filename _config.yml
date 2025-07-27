@@ -39,12 +39,14 @@ producthunt: "https://scholar.google.com/citations?user=4XvcYKEAAAAJ&hl=en"
 
 # Navigation
 navigation:
+  - text: Publications
+    url: /pub
   - text: About
     url: /about
-  - text: Archive
-    url: /tags
-  - text: Style Guide
-    url: /style-guide
+  - text: cv
+    url: /cv
+  - text: Interests
+    url: /interests
 
 # Required Plugins
 plugins_dir:
