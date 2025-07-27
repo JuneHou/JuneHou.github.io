@@ -39,11 +39,11 @@ producthunt: "https://scholar.google.com/citations?user=4XvcYKEAAAAJ&hl=en"
 # Navigation
 navigation:
   - text: Publications
-    url: /pub
+    url: /Publications
   - text: cv
     url: /cv
   - text: Interests
-    url: /interests
+    url: /Interests
 
 # Required Plugins
 plugins_dir:
