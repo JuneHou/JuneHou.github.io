@@ -1,6 +1,6 @@
 # Site setings
 name: "Jun Hou"
-description: "Personal website of Jun Hou, a PhD student and researcher focusing on trustworthy AI, multimodal learning, and causality."
+description: "This is personal website of Jun Hou, a PhD student and researcher focusing on trustworthy AI, multimodal learning, and causality."
 meta_description: "Jun Hou, PhD student and researcher in trustworthy and explainable AI, causal inference, and multimodal learning."
 logo: "assets/images/logo.png"
 favicon: "assets/images/favicon.ico"
@@ -38,7 +38,7 @@ github: "https://github.com/JuneHou"
 #instagram: "username"
 #pinterest: "username"
 linkedin: "https://www.linkedin.com/in/jun-hou-1392b8149/"
-producthunt: "https://scholar.google.com/citations?user=4XvcYKEAAAAJ&hl=en"
+codepen: "https://scholar.google.com/citations?user=4XvcYKEAAAAJ&hl=en"
 
 # Navigation
 navigation:
