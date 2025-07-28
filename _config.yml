@@ -50,7 +50,7 @@ navigation:
     url: /Interests
 
 # Required Plugins
-plugins_dir:
+plugins:
   - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-sitemap
