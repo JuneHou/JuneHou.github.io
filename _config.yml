@@ -48,9 +48,7 @@ navigation:
     url: /cv
   - text: Interests
     url: /Interests
-  - text: Contact
-    url: /Contact
-
+    
 # Required Plugins
 plugins:
   - jekyll-paginate
