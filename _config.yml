@@ -38,7 +38,7 @@ github: "https://github.com/JuneHou"
 #instagram: "username"
 #pinterest: "username"
 linkedin: "https://www.linkedin.com/in/jun-hou-1392b8149/"
-codepen: "https://scholar.google.com/citations?user=4XvcYKEAAAAJ&hl=en"
+google_scholar: "https://scholar.google.com/citations?user=4XvcYKEAAAAJ&hl=en"
 
 # Navigation
 navigation:
@@ -48,6 +48,8 @@ navigation:
     url: /cv
   - text: Interests
     url: /Interests
+  - text: Contact
+    url: /Contact
 
 # Required Plugins
 plugins:
