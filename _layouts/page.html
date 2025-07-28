@@ -15,8 +15,10 @@ layout: default
                 {{content}}
             </div>
         </article>
+        {% comment %}
         {% if site.mailchimp_url %}
         {% include newsletter-box.html %}
         {% endif %}
+        {% endcomment %}
     </main>
 </div>
