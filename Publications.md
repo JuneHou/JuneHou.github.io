@@ -7,14 +7,14 @@ title: Publications
   .pub-item {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 2.5rem; /* Space between publication entries */
+    margin-bottom: 2.5rem;
   }
   .pub-image {
     flex-shrink: 0;
     margin-right: 1.5rem;
   }
   .pub-image img {
-    width: 160px; /* Width of the thumbnail */
+    width: 160px;
     height: auto;
     border: 1px solid #eee;
   }
