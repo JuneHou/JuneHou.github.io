@@ -2,6 +2,7 @@
 title: "A comprehensive survey on the trustworthiness of large language models in healthcare"
 authors: "Manar Aljohani, <strong>Jun Hou</strong>, Sindhura Kommu, Xuan Wang"
 venue: "arXiv"
+date: 2025-08-19
 image: "assets/images/papers/Trust-survey.png" # Path to your thumbnail image
 pdf: "https://arxiv.org/abs/2502.15871"
 #code: "https://github.com/your-repo/project-code"

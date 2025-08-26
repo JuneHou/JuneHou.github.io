@@ -37,7 +37,8 @@ title: Publications
   }
 </style>
 
-{% for pub in site.publications reversed %}
+{% assign pubs = site.publications | sort: 'date' %}
+{% for pub in pubs reversed %}
 <div class="pub-item">
   <div class="pub-image">
     <img src="{{ site.baseurl }}/{{ pub.image }}" alt="Thumbnail for {{ pub.title }}">

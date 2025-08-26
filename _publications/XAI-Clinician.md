@@ -2,6 +2,7 @@
 title: "Explainable ai for clinical outcome prediction: a survey of clinician perceptions and preferences"
 authors: "<strong>Jun Hou</strong>, Lucy Lu Wang"
 venue: "2025 AMIA Summits on Translational Science Proceedings"
+date: 2024-11-28
 image: "assets/images/papers/XAI-Clinician.png" # Path to your thumbnail image
 pdf: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12150750/"
 code: "https://github.com/JuneHou/XAI MOR Survey.git"

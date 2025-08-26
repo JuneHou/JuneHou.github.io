@@ -2,6 +2,7 @@
 title: "BTW: A Non-Parametric Variance Stabilization Framework for Multimodal Model Integration"
 authors: "<strong>Jun Hou</strong>, Le Wang, Xuan Wang"
 venue: "EMNLP 2025 Findings"
+date: 2025-08-20
 image: "assets/images/papers/BTW.png"
 pdf: "https://openreview.net/forum?id=EXp1qDqhCk"
 code: "https://github.com/JuneHou/Multimodal-Infomax-moe.git"
