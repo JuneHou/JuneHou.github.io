@@ -32,6 +32,49 @@ title: Jun Hou
     </div>
   </div>
 </div>
+
+<style>
+  .news-section h2 {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+  }
+  .news-item {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+  }
+  .news-date {
+    flex-shrink: 0;
+    width: 90px;
+    color: #666;
+    font-family: monospace;
+  }
+</style>
+
+<div class="outer news-section">
+  <div class="inner">
+    <h2>News</h2>
+
+    <div class="news-item">
+      <div class="news-date">08/20</div>
+      <div class="news-description">
+        Our paper “<a href="https://openreview.net/forum?id=EXp1qDqhCk&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DEMNLP%2F2025%2FConference%2FAuthors%23your-submissions)" target="_blank" rel="noopener noreferrer">BTW: A Non-Parametric Variance Stabilization Framework for Multimodal Model Integration</a>” has been accepted to the EMNLP 2025!
+      </div>
+    </div>
+    
+    <div class="news-item">
+      <div class="news-date">07/15</div>
+      <div class="news-description">
+        Gave a talk on "LLM & Real World Applications" for the Data Science for the Public Good Program. Presentation materials are available on <a href="https://github.com/victoria307/DSPG_2025" target="_blank" rel="noopener noreferrer">GitHub</a>.
+      </div>
+    </div>
+
+    </div>
+</div>
+
 {% comment %}
 <div class="outer">
     {% if page.url == "/" %}
