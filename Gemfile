@@ -9,3 +9,6 @@ group :jekyll_plugins do
   gem 'jekyll-sitemap'
 end
 
+# Ruby 3+ dropped webrick from the stdlib; `jekyll serve` needs it locally.
+# GitHub Pages builds server-side and ignores this file.
+gem "webrick", "~> 1.8"

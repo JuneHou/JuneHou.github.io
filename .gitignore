@@ -10,3 +10,6 @@ Gemfile.lock
 # Temporary files
 tmp
 .DS_Store
+
+# Original photos (only the optimized copies under assets/ are committed)
+photos-src/

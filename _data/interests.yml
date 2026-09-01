@@ -1,0 +1,40 @@
+sections:
+- id: hiking
+  title: Hiking
+  blurb: Most weekends I'm somewhere on a trail around Blacksburg. The Appalachian Trail runs right past
+    town, so there's always another ridge to get up before breakfast.
+  photos:
+  - file: panorama.jpg
+    alt: Panoramic view along the ridge
+    caption: TEST CAPTION - should survive a re-run
+    w: 900
+    h: 300
+    ar: 3.0
+  - file: portrait-falls.jpg
+    alt: ''
+    caption: ''
+    w: 600
+    h: 900
+    ar: 0.6667
+  - file: ridge-4x3.jpg
+    alt: ''
+    caption: ''
+    w: 900
+    h: 675
+    ar: 1.3333
+  - file: square-summit.jpg
+    alt: ''
+    caption: ''
+    w: 900
+    h: 900
+    ar: 1.0
+- id: baking
+  title: Baking
+  blurb: Sourdough started as a pandemic cliche and turned into a standing weekend ritual. Long fermentations
+    suit a research schedule -- you set something going and come back to it hours later.
+  photos: []
+- id: cycling
+  title: Cycling
+  blurb: Road riding through the New River Valley, plus the occasional gravel detour when the pavement
+    runs out.
+  photos: []
