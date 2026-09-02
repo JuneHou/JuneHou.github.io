@@ -40,9 +40,11 @@ title: Publications
 {% assign pubs = site.publications | sort: 'date' %}
 {% for pub in pubs reversed %}
 <div class="pub-item">
+  {% if pub.image and pub.image != '' %}
   <div class="pub-image">
-    <img src="{{ site.baseurl }}/{{ pub.image }}" alt="Thumbnail for {{ pub.title }}">
+    <img src="{{ site.baseurl }}/{{ pub.image }}" alt="Thumbnail for {{ pub.title }}" loading="lazy">
   </div>
+  {% endif %}
   <div class="pub-info">
     <h3>{{ pub.title }}</h3>
     <p>{{ pub.authors }}</p>

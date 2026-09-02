@@ -16,6 +16,8 @@ them unmodified would publish trailhead and home locations.
 Existing alt/caption text in _data/interests.yml is preserved; new photos are appended
 with empty alt/caption for you to fill in.
 """
+import hashlib
+import re
 import sys
 from pathlib import Path
 
@@ -79,13 +81,34 @@ def first_image(d):
 
 
 def build_avatar(src, centering):
-    """Square crop -- never squash. The theme pins the avatar to a square box."""
+    """Square crop -- never squash. The theme pins the avatar to a square box.
+
+    The filename carries a content hash. Browsers cache images hard and will not
+    refetch an unchanged filename, so a stable name means a new photo silently
+    never appears for anyone who has visited before.
+    """
     with Image.open(src) as im:
         im = ImageOps.exif_transpose(im).convert("RGB")
         out = ImageOps.fit(im, (AVATAR_PX, AVATAR_PX), Image.LANCZOS, centering=centering)
     clean = Image.frombytes(out.mode, out.size, out.tobytes())
-    dest = ROOT / "assets" / "images" / "authorimage.jpg"
-    clean.save(dest, "JPEG", quality=88, optimize=True, progressive=True)
+
+    tmp = ROOT / "assets" / "images" / ".avatar.tmp.jpg"
+    clean.save(tmp, "JPEG", quality=88, optimize=True, progressive=True)
+    digest = hashlib.sha256(tmp.read_bytes()).hexdigest()[:8]
+    name = f"authorimage-{digest}.jpg"
+    dest = ROOT / "assets" / "images" / name
+
+    for stale in (ROOT / "assets" / "images").glob("authorimage*.jpg"):
+        if stale.name != name:
+            stale.unlink()
+    tmp.replace(dest)
+
+    cfg = ROOT / "_config.yml"
+    text = cfg.read_text()
+    patched = re.sub(r'(\n\s+image:\s*")authorimage[^"]*(")', rf'\g<1>{name}\g<2>', text, count=1)
+    if patched != text:
+        cfg.write_text(patched)
+        print(f"  [config ] author.image -> {name}")
     return dest, out.size
 
 
