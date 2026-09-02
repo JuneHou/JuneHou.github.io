@@ -13,3 +13,4 @@ tmp
 
 # Original photos (only the optimized copies under assets/ are committed)
 photos-src/
+photos/

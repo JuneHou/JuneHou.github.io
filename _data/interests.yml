@@ -1,40 +1,55 @@
 sections:
 - id: hiking
   title: Hiking
-  blurb: Most weekends I'm somewhere on a trail around Blacksburg. The Appalachian Trail runs right past
-    town, so there's always another ridge to get up before breakfast.
+  blurb: Most of these are from Mount Rainier and the Olympics in Washington.
   photos:
-  - file: panorama.jpg
-    alt: Panoramic view along the ridge
-    caption: TEST CAPTION - should survive a re-run
+  - file: dsc-0167.jpg
+    alt: A small grey bird perched on a lichen-draped branch in Olympic National Park
+    caption: Olympic National Park, Washington
     w: 900
-    h: 300
-    ar: 3.0
-  - file: portrait-falls.jpg
-    alt: ''
-    caption: ''
-    w: 600
+    h: 519
+    ar: 1.7341
+  - file: dsc-0395.jpg
+    alt: Forested ridgelines below snow-capped peaks in Olympic National Park
+    caption: Olympic National Park, Washington
+    w: 900
+    h: 600
+    ar: 1.5
+  - file: dsc-1550.jpg
+    alt: A jagged, snow-streaked ridge above a wildflower meadow at Mount Rainier
+    caption: Mount Rainier National Park, Washington
+    w: 900
+    h: 599
+    ar: 1.5025
+  - file: dsc-1633.jpg
+    alt: Mount Rainier's glaciers, with a line of hikers crossing the rocky slope below
+    caption: Mount Rainier National Park, Washington
+    w: 599
     h: 900
-    ar: 0.6667
-  - file: ridge-4x3.jpg
-    alt: ''
+    ar: 0.6656
+- id: baking
+  title: Baking
+  blurb: Weekend baking, somewhere between pastry and bread.
+  photos:
+  - file: img-0642.jpg
+    alt: Golden flaky pastries on parchment, one broken open to show the filling
     caption: ''
     w: 900
     h: 675
     ar: 1.3333
-  - file: square-summit.jpg
-    alt: ''
+  - file: img-3583.jpg
+    alt: Focaccia baked in a square pan, dimpled and topped with herbs and dark olives
     caption: ''
     w: 900
-    h: 900
-    ar: 1.0
-- id: baking
-  title: Baking
-  blurb: Sourdough started as a pandemic cliche and turned into a standing weekend ritual. Long fermentations
-    suit a research schedule -- you set something going and come back to it hours later.
-  photos: []
+    h: 675
+    ar: 1.3333
 - id: cycling
   title: Cycling
-  blurb: Road riding through the New River Valley, plus the occasional gravel detour when the pavement
-    runs out.
-  photos: []
+  blurb: Road miles through farmland and back roads.
+  photos:
+  - file: img-9200.jpg
+    alt: A road bike leaning against a wooden fence beside a pasture with grazing horses
+    caption: ''
+    w: 675
+    h: 900
+    ar: 0.75

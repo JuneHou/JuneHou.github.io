@@ -92,6 +92,8 @@
   display: inline-block;
   height: 70px;
   width: 70px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .author-title {
@@ -303,6 +305,8 @@
   display: inline-block;
   height: 130px;
   width: 130px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .hero-title {

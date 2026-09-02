@@ -25,6 +25,12 @@ try:
 except ImportError as e:
     sys.exit(f"missing dependency: {e}. Install with: pip install Pillow pyyaml")
 
+try:                              # iPhone .HEIC support; optional
+    import pillow_heif
+    pillow_heif.register_heif_opener()
+except ImportError:
+    pass
+
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "photos-src"
 OUT = ROOT / "assets" / "images" / "interests"
@@ -33,7 +39,13 @@ DATA = ROOT / "_data" / "interests.yml"
 THUMB_EDGE = 900     # long edge for the grid image (2x the ~450px it renders at)
 FULL_EDGE = 1800     # long edge for the lightbox image
 QUALITY = 82
-EXTS = {".jpg", ".jpeg", ".png", ".webp", ".tif", ".tiff"}
+EXTS = {".jpg", ".jpeg", ".png", ".webp", ".tif", ".tiff", ".heic", ".heif"}
+
+# Folders that are not gallery sections. They feed single site images instead.
+AVATAR_PX = 520          # 4x the 130px the homepage avatar renders at
+COVER_PX = 2400          # hero background, spans the full viewport width
+RESERVED = {"profile": "avatar", "cover": "cover"}
+CENTERING = (0.5, 0.4)   # crop slightly above centre; faces usually sit high
 
 
 def encode(im, dest, long_edge):
@@ -59,6 +71,36 @@ def encode(im, dest, long_edge):
     return clean.size
 
 
+def first_image(d):
+    for f in sorted(d.iterdir()):
+        if f.suffix.lower() in EXTS and not f.name.startswith("."):
+            return f
+    return None
+
+
+def build_avatar(src, centering):
+    """Square crop -- never squash. The theme pins the avatar to a square box."""
+    with Image.open(src) as im:
+        im = ImageOps.exif_transpose(im).convert("RGB")
+        out = ImageOps.fit(im, (AVATAR_PX, AVATAR_PX), Image.LANCZOS, centering=centering)
+    clean = Image.frombytes(out.mode, out.size, out.tobytes())
+    dest = ROOT / "assets" / "images" / "authorimage.jpg"
+    clean.save(dest, "JPEG", quality=88, optimize=True, progressive=True)
+    return dest, out.size
+
+
+def build_cover(src):
+    with Image.open(src) as im:
+        im = ImageOps.exif_transpose(im).convert("RGB")
+        w, h = im.size
+        if w > COVER_PX:
+            im = im.resize((COVER_PX, round(h * COVER_PX / w)), Image.LANCZOS)
+    clean = Image.frombytes(im.mode, im.size, im.tobytes())
+    dest = ROOT / "assets" / "images" / "cover.jpg"
+    clean.save(dest, "JPEG", quality=82, optimize=True, progressive=True)
+    return dest, im.size
+
+
 def load_data():
     if DATA.exists():
         return yaml.safe_load(DATA.read_text()) or {"sections": []}
@@ -66,9 +108,14 @@ def load_data():
 
 
 def main():
+    global CENTERING
+    for a in sys.argv[1:]:
+        if a.startswith("--face-y="):        # 0.0 = crop to top of frame, 1.0 = bottom
+            CENTERING = (0.5, float(a.split("=")[1]))
+
     if not SRC.exists():
         SRC.mkdir(parents=True, exist_ok=True)
-        for s in ("hiking", "baking", "cycling"):
+        for s in ("hiking", "baking", "cycling", "profile", "cover"):
             (SRC / s).mkdir(exist_ok=True)
         print(f"created {SRC.relative_to(ROOT)}/ -- drop photos in the section folders and re-run")
         return
@@ -79,6 +126,19 @@ def main():
 
     for sdir in sorted(p for p in SRC.iterdir() if p.is_dir()):
         sid = sdir.name
+
+        if sid in RESERVED:
+            src = first_image(sdir)
+            if src is None:
+                continue
+            if sid == "profile":
+                dest, size = build_avatar(src, CENTERING)
+            else:
+                dest, size = build_cover(src)
+            print(f"  [{RESERVED[sid]:7}] {src.name:34} -> "
+                  f"{dest.relative_to(ROOT)}  {size[0]}x{size[1]}")
+            continue
+
         section = sections.get(sid)
         if section is None:
             section = {"id": sid, "title": sid.title(), "blurb": "", "photos": []}
